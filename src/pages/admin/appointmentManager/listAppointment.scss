@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+.List_appointment_container {
+    color: black;
+
+    .new__booking__button {
+        border: none;
+        background-color: black;
+        color: #fff;
+        height: 32px;
+        padding: 0px 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    table {
+        margin-top: 20px;
+
+        .staff__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        td,
+        th {
+            border: 1px solid #898989;
+        }
+
+        th {
+            padding: 20px;
+        }
+
+        tbody {
+            .appointment {
+                height: 50px;
+                width: 300px;
+
+                p {
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+
+                .appointment__detail {
+                    background-color: #e2d7f5;
+                    border-left: 5px solid #7d32a9;
+                    height: 100px;
+                    overflow-y: scroll;
+                    cursor: pointer;
+                    padding-left: 20px;
+
+                    .customer__name {
+                        // font-weight: bold;
+                    }
+                }
+
+                .appointment__detail.accepted {
+                    background-color: #a7f6c5;
+                    border-left: 5px solid #70bb5a;
+                }
+
+                .appointment__detail.rejected {
+                    background-color: #f6d6d6;
+                    border-left: 5px solid #fa9f9f;
+                }
+
+                .appointment__detail.done {
+                    background-color: #f7f7d1;
+                    border-left: 5px solid #ecc23d;
+                }
+            }
+
+            .appointment.selectedStaff {
+                width: 90%;
+            }
+        }
+    }
+}

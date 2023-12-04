@@ -1,0 +1,407 @@
+.staff_container {
+   
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    table td {
+        vertical-align: 0px;
+    }
+
+    tbody tr td th {
+        height: 50px;
+        padding: 0 !important;
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    .render_service_item {
+        padding: 10px !important;
+        text-align: center;
+        vertical-align: middle;
+        max-width: 120px;
+    }
+
+    .desc {
+        max-height: 90px;
+        overflow-y: scroll;
+       
+
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .action {
+   
+        display: flex;
+        gap: 5px;
+        margin: 0 !important;
+        height: 133px;
+        justify-content: space-evenly;
+        // border-bottom: 1px solid rgb(238, 233, 233);
+  
+
+        button {
+            margin: 0;
+            //padding: 7px 20px;
+
+        }
+    }
+
+    .img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    
+}
+
+/* EditStaff */
+
+.container_editService {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(black, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+
+    .container_content_service {
+        width: 1100px;
+        background-color: white;
+        border-radius: 10px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1002;
+        height: 650px;
+        display: flex;
+        justify-content: space-evenly;
+        max-height: 650px;
+            overflow-y: scroll;
+
+        .add_service_content {
+            // display: flex;
+            padding-top: 30px;
+
+
+            .add_image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 220px;
+            
+                img {
+                 
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+
+            }
+
+
+            .add_content {
+
+
+                // margin-top: 30px;
+                .status_container {
+                    display: flex;
+                    width: 130px;
+                    justify-content: space-between;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                input {
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    font-size: 22px;
+                }
+
+                .button {
+
+                    margin-top: 10px;
+
+                    .btn_submit {
+                        position: relative !important;
+
+                        .btn_loadingg {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: none;
+                        }
+
+                        &.active {
+                            background-color: rgba(rgb(4, 0, 0), 0.4) !important;
+                            opacity: 0.7 !important;
+
+                            .btn_loadingg {
+                                display: block;
+                            }
+                        }
+                    }
+
+                }
+
+                .button button {
+                    margin-left: 20px;
+                }
+
+
+
+
+            }
+
+            .add_content input {
+                width: 500px;
+                height: 40px;
+                border-radius: 5px;
+            }
+
+
+
+
+        }
+
+        .add_service_content2 {
+            width: 400px;
+            padding-top: 30px;
+
+            h2 {
+                margin-bottom: 30px;
+            }
+
+            .add_service {
+
+                display: flex;
+                gap: 20px;
+
+                select {
+                    padding: 7px 12px !important;
+                    font-size: 20px !important;
+                    border-radius: 10px;
+                }
+
+                button {
+                    padding: 7px 10px !important;
+                    font-size: 18px;
+                    border-radius: 10px;
+                }
+
+            }
+
+            .add_content_container_service {
+                margin-top: 30px;
+
+
+                img {
+                    border-radius: 50% !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* AddStaff */
+
+
+.add_staff_content {
+    display: flex;
+    margin-left: 30px;
+    gap: 100px;
+
+    .add_image {
+        margin-top: 60px;
+    }
+
+    .add_content {
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .btn_submit {
+            position: relative !important;
+
+            .btn_loading {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+
+            &.active {
+                background-color: rgba(rgb(4, 0, 0), 0.4) !important;
+                opacity: 0.7 !important;
+
+                .btn_loading {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .add_content input {
+        width: 400px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .staff_service {
+        font-size: 20px;
+
+        .staff_service_text {
+            font-weight: bold;
+            h3{
+                margin: 0 !important;
+                padding: 0;
+            }
+            // margin-top: 20px;
+        }
+
+        .list_service {
+            margin: 10px 0;
+        }
+
+        .list_service label {
+            font-size: 25px;
+        }
+
+
+    }
+
+    .button_add_staff {
+        margin-top: 10px;
+        border-radius: 10px !important;
+        .btn_submit {
+            position: relative !important;
+
+            .btn_loading {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+
+            &.active {
+                background-color: rgba(rgb(4, 0, 0), 0.4) !important;
+                opacity: 0.7 !important;
+
+                .btn_loading {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .button_add_staff button {
+        font-size: 15px;
+
+    }
+    .container_choose_service{
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+    }
+  
+}
+.admin_title {
+    display: flex !important;
+    width: 500px;
+    margin-bottom: 20px;
+
+    h3 {
+        cursor: pointer;
+        padding-right: 10px;
+    }
+
+    h3:hover {
+        color: black;
+    }
+
+    .title_1 {
+        color: rgb(158, 157, 157);
+    }
+
+}
+.add_staff_nameservice{
+    font-size: 19px !important;
+}
